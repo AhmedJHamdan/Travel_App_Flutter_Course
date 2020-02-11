@@ -3,6 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:flutter_1/BackgroundGradient.dart';
 import 'package:flutter_1/CardImage.dart';
 import 'package:flutter_1/CardList.dart';
+import 'package:flutter_1/DescriptionPlace.dart';
+
+import 'button.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -40,15 +44,20 @@ class Home extends StatelessWidget{
     // TODO: implement build
     return Scaffold(
 
-      body: Stack(
+      body: Column(
+          children: <Widget>[
+
+      Stack(
         children: <Widget>[
           BackGroundGradient(300,"Popular",color1, color2),
                 Cardlist()
 
         ],
       ),
+            DescriptionPlance(),
 
-      );
+button()
+      ]));
 
 
   }

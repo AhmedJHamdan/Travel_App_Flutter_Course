@@ -8,6 +8,7 @@ class CardImage extends StatelessWidget{
       alignment: Alignment(0.8,0.95),
       children: <Widget>[
         cardImage,
+        favourite_Icon
       ],
     );
 

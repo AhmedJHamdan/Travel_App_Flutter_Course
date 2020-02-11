@@ -27,7 +27,7 @@ class BackGroundGradient extends StatelessWidget{
             child:Container(
                 margin: EdgeInsets.only(
                     top: 50,
-                    left: 30
+                    left: 20
                 ),
                 child: Text(
                   text,

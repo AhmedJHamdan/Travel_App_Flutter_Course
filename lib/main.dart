@@ -1,9 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_1/BackgroundGradient.dart';
 import 'package:flutter_1/CardImage.dart';
 import 'package:flutter_1/CardList.dart';
 import 'package:flutter_1/DescriptionPlace.dart';
+import 'package:flutter_1/Homes.dart';
+import 'package:flutter_1/ReviewItem.dart';
 
 import 'button.dart';
 
@@ -35,29 +38,52 @@ class MyApp extends StatelessWidget {
 
 
 class Home extends StatelessWidget{
-  var color1= 0xFF4169D2;
-  var color2=0xFF514DBC;
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 
     // TODO: implement build
     return Scaffold(
+        bottomNavigationBar: CupertinoTabScaffold(
+        tabBar: CupertinoTabBar(
+        items: [
+        BottomNavigationBarItem(
+        icon: Icon(Icons.home, color: Colors.indigo),
+    title: Text("Home")
+    ),
+    BottomNavigationBarItem(
+    icon: Icon(Icons.search, color: Colors.indigo),
+    title: Text("Search")
+    ),
+    BottomNavigationBarItem(
+    icon: Icon(Icons.person, color: Colors.indigo),
+    title: Text("Profile")
+    ),
+    ]
+    ),
 
-      body: Column(
-          children: <Widget>[
+    tabBuilder: (BuildContext context, int index) {
+      switch (index) {
+        case 0:
+          return CupertinoTabView(
+            builder: (BuildContext context) => Homes(),
+          );
+          break;
+        case 1:
+          return CupertinoTabView(
+            builder: (BuildContext context) => Homes(),
+          );
+          break;
+        case 2:
+          return CupertinoTabView(
+            builder: (BuildContext context) => Homes(),
+          );
+          break;
+      }
+    }),
+      );
 
-      Stack(
-        children: <Widget>[
-          BackGroundGradient(300,"Popular",color1, color2),
-                Cardlist()
-
-        ],
-      ),
-            DescriptionPlance(),
-
-button()
-      ]));
 
 
   }

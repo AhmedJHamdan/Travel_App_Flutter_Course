@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/floating_action_button.dart';
 
 class CardImage extends StatelessWidget{
   @override
@@ -8,7 +9,7 @@ class CardImage extends StatelessWidget{
       alignment: Alignment(0.8,0.95),
       children: <Widget>[
         cardImage,
-        favourite_Icon
+FloatingAction()
       ],
     );
 

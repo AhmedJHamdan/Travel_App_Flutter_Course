@@ -5,6 +5,7 @@ import 'package:flutter_1/Place/UI/CardImage.dart';
 import 'package:flutter_1/Place/UI/Homes.dart';
 import 'package:flutter_1/User/UI/profile_trips.dart';
 
+import 'Login.dart';
 import 'Place/button.dart';
 
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:Home() ,
+      home:Login() ,
     );
   }
 }

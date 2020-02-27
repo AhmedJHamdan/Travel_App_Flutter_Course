@@ -16,12 +16,13 @@ class Cardlist extends StatelessWidget{
       scrollDirection: Axis.horizontal,
       children: <Widget>[
 
-        CardImage(),
-        CardImage(),
-        CardImage(),
-        CardImage(),
-        CardImage(),
-        CardImage(),
+        CardImage("dsds"),
+        CardImage("sdsd3d"),
+        CardImage("sdsaa"),
+        CardImage("sdsssssss"),
+        CardImage("sds"),
+        CardImage("dji"),
+
 
       ],
         ));

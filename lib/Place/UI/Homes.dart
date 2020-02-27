@@ -17,49 +17,51 @@ class Homes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return
-    Column(
-    children: <Widget>[
+    Scaffold(
+      body: Column(
+      children: <Widget>[
 
-    Stack(
-    children: <Widget>[
-    BackGroundGradient(300,"Popular",color1, color2),
-    Cardlist()
+      Stack(
+      children: <Widget>[
+      BackGroundGradient(300,"Popular",color1, color2),
+      Cardlist()
 
-    ],
-    ),
+      ],
+      ),
 
-    Container(
-    height: 300,
-    child:
-    ListView(
-    children: <Widget>[
-    DescriptionPlance(),
+      Container(
+      height: 300,
+      child:
+      ListView(
+      children: <Widget>[
+      DescriptionPlance(),
 
-    button(),
-    Container(
-    alignment: Alignment.centerLeft,
-    margin: EdgeInsets.only(
-    left: 20,
-    top: 30,
-    ),
-    child:
-    Text("All Reviews",
-    style: TextStyle(
-    color: Colors.grey
-    ),
+      button(),
+      Container(
+      alignment: Alignment.centerLeft,
+      margin: EdgeInsets.only(
+      left: 20,
+      top: 30,
+      ),
+      child:
+      Text("All Reviews",
+      style: TextStyle(
+      color: Colors.grey
+      ),
 
-    ),
+      ),
 
-    ),
+      ),
 
 
-    Review(Nombre,ImagePath,Details, Description),
-    Review(Nombre,ImagePath,Details, Description),
-    Review(Nombre,ImagePath,Details, Description),
-    ]
-    ),
-    )
-    ],
+      Review(Nombre,ImagePath,Details, Description),
+      Review(Nombre,ImagePath,Details, Description),
+      Review(Nombre,ImagePath,Details, Description),
+      ]
+      ),
+      )
+      ],
+      ),
     );
   }
 }

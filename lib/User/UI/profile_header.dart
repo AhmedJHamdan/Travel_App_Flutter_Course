@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/Firebase/sign_in_with_google.dart';
 import 'user_info.dart';
 import '../button_bar.dart';
 
@@ -29,7 +30,7 @@ class ProfileHeader extends StatelessWidget {
               title
             ],
           ),
-          UserInfo('assets/Yo.jpg', 'Ahmed Hamdan','ahmedhamdan9898@gmail'),
+          UserInfo(photourl,name,email),
           ButtonsBar()
         ],
       ),

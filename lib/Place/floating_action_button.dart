@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/physics.dart';
 
 
 
 class FloatingAction extends StatefulWidget {
+  var tag;
+
+  FloatingAction(this.tag);
+
   @override
   _FloatingActionState createState() => _FloatingActionState();
 }
@@ -32,6 +37,7 @@ class _FloatingActionState extends State<FloatingAction> with  AutomaticKeepAliv
       mini: true,
       tooltip: "fav",
       onPressed: OnPressedFav,
+      heroTag: widget.tag,
       child: Icon(
 icon
       ),

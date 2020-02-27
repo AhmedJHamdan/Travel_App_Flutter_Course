@@ -33,6 +33,7 @@ class _floatting_action_button_fav extends State <floatting_action_button_fav> w
       backgroundColor: Color(0xFF16DB58),
       mini: true,
       tooltip: "Fav",
+      heroTag: "loos454",
       child: Icon(
 
         favIco,

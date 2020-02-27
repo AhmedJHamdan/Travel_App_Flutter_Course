@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import '../floating_action_button.dart';
 class CardImage extends StatelessWidget{
+  var tag;
+
+  CardImage(this.tag);
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -8,7 +12,7 @@ class CardImage extends StatelessWidget{
       alignment: Alignment(0.8,0.95),
       children: <Widget>[
         cardImage,
-FloatingAction()
+FloatingAction(tag)
       ],
     );
 

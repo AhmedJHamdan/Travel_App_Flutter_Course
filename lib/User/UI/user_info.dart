@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/Firebase/sign_in_with_google.dart';
 
 class UserInfo extends StatelessWidget {
 
@@ -26,7 +27,7 @@ class UserInfo extends StatelessWidget {
           shape: BoxShape.circle,
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage(imgProfile)
+              image: AssetImage("assets/Yo.jpg")
           )
       ),
     );
@@ -39,7 +40,7 @@ class UserInfo extends StatelessWidget {
                 bottom: 5.0
             ),
             child: Text(
-                name,
+                "Ahmed Hamdan",
                 style: TextStyle(
                   fontSize: 18.0,
                   fontWeight: FontWeight.bold,
@@ -49,7 +50,7 @@ class UserInfo extends StatelessWidget {
             )
         ),
         Text(
-            email,
+            "ahmedhamdan@gmail",
             style: TextStyle(
                 fontSize: 15.0,
                 color: Colors.white30,

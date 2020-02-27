@@ -1,14 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_1/BackgroundGradient.dart';
-import 'package:flutter_1/CardImage.dart';
-import 'package:flutter_1/CardList.dart';
-import 'package:flutter_1/DescriptionPlace.dart';
-import 'package:flutter_1/Homes.dart';
-import 'package:flutter_1/ReviewItem.dart';
+import 'package:flutter_1/Place/CardImage.dart';
+import 'package:flutter_1/Place/DescriptionPlace.dart';
+import 'package:flutter_1/Place/Homes.dart';
+import 'package:flutter_1/User/profile_trips.dart';
 
-import 'button.dart';
+import 'Place/button.dart';
 
 
 void main() => runApp(MyApp());
@@ -77,7 +75,7 @@ class Home extends StatelessWidget{
           break;
         case 2:
           return CupertinoTabView(
-            builder: (BuildContext context) => Homes(),
+            builder: (BuildContext context) => ProfileTrips(),
           );
           break;
       }

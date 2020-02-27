@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_1/floating_action_button.dart';
-
+import 'floating_action_button.dart';
 class CardImage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {

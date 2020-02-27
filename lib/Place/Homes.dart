@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_1/Place/review.dart';
 
 import 'BackgroundGradient.dart';
 import 'CardList.dart';
 import 'DescriptionPlace.dart';
-import 'ReviewItem.dart';
 import 'button.dart';
 
 class Homes extends StatelessWidget {
+  String Nombre= "Ahmed Hamdan";
+  String ImagePath= "assets/Yo.jpg";
+  String Details= "1 review 5 photos";
+  String Description= "It's So coool, I really love it so much";
+
   var color1= 0xFF4169D2;
   var color2=0xFF514DBC;
   @override
@@ -48,7 +53,9 @@ class Homes extends StatelessWidget {
     ),
 
 
-    ReviewItem(),
+    Review(Nombre,ImagePath,Details, Description),
+    Review(Nombre,ImagePath,Details, Description),
+    Review(Nombre,ImagePath,Details, Description),
     ]
     ),
     )

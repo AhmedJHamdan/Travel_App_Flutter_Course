@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'Place.dart';
+import 'package:flutter_1/Place/Place.dart';
 import 'ProfilePlace.dart';
 
 

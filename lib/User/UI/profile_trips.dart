@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_1/User/profile_background.dart';
-import 'package:flutter_1/User/profile_header.dart';
-import 'package:flutter_1/User/profile_place_list.dart';
+import 'package:flutter_1/User/UI/profile_background.dart';
+import 'package:flutter_1/User/UI/profile_header.dart';
+import 'package:flutter_1/User/UI/profile_place_list.dart';
 
-import 'Place.dart';
+import '../../Place/Place.dart';
 import 'ProfilePlace.dart';
 
 class ProfileTrips extends StatelessWidget {

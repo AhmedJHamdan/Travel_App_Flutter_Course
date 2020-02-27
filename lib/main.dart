@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_1/Place/CardImage.dart';
-import 'package:flutter_1/Place/DescriptionPlace.dart';
-import 'package:flutter_1/Place/Homes.dart';
-import 'package:flutter_1/User/profile_trips.dart';
+import 'package:flutter_1/Place/UI/CardImage.dart';
+import 'package:flutter_1/Place/UI/Homes.dart';
+import 'package:flutter_1/User/UI/profile_trips.dart';
 
 import 'Place/button.dart';
 

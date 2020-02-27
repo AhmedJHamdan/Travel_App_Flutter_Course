@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'Place.dart';
-import 'floatting_action_button_fav.dart';
+import 'package:flutter_1/Place/Place.dart';
+import '../floatting_action_button_fav.dart';
 
 class ProfilePlaceInfo extends StatelessWidget {
 

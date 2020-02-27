@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_1/Place/review.dart';
+import 'package:flutter_1/Place/UI/review.dart';
 
-import 'BackgroundGradient.dart';
+import '../BackgroundGradient.dart';
 import 'CardList.dart';
+import '../button.dart';
 import 'DescriptionPlace.dart';
-import 'button.dart';
 
 class Homes extends StatelessWidget {
   String Nombre= "Ahmed Hamdan";

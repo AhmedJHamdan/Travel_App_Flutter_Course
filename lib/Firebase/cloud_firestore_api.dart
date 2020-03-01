@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter_1/Firebase/sign_in_with_google.dart';
 import 'package:flutter_1/User/model/Users.dart';
 
 class CloudFirestoreAPI {
@@ -16,6 +17,20 @@ class CloudFirestoreAPI {
       'photourl': user.photourl,
 
     }, merge: true);
+  }
+
+  Future<void> DeleteUser(String UID){
+   return _db.collection(USERS).document(UID).delete();
 
   }
+
+  void getData() {
+    _db
+        .collection(USERS)
+        .getDocuments().then((QuerySnapshot snapshot) {
+      snapshot.documents.forEach((f) => print('${f.data}}'));
+
+    });
+  }
+
   }

@@ -53,6 +53,10 @@ top: 260,
                           onPressed: (){
 
                             signInWithGoogle().whenComplete( () {
+                     Users user= new  Users(uid, name,photourl, email);
+CloudFirestoreAPI().updateUserData(user);
+CloudFirestoreAPI().getData();
+
                               Navigator.of(context).push(
                                   MaterialPageRoute(
                                       builder: (context) {
@@ -61,7 +65,6 @@ top: 260,
                                   ));
                             });
 
-                            CloudFirestoreAPI().updateUserData(new Users(uid, name,photourl, email));
 
                           },
                            text: "     Sign in With Google",

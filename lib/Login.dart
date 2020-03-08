@@ -58,12 +58,12 @@ CloudFirestoreAPI().updateUserData(user);
 CloudFirestoreAPI().getData();
 
                               Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                      builder: (context) {
-                                        return Home();
-                                      }
-                                  ));
-                            });
+    MaterialPageRoute(
+    builder: (context) {
+    return Home();
+    }
+    ));
+    });
 
 
                           },

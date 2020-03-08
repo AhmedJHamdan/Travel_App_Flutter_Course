@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
-
-class CircleButton extends StatefulWidget {
+import 'package:flutter_1/TextInput.dart';
+import 'package:flutter_1/User/UI/add_place_screen.dart';
+class addButton extends StatefulWidget {
   bool mini;
   var icon;
   double iconSize;
   var color;
   var tag;
+  addButton(this.mini, this.icon, this.iconSize, this.color, this.tag );
 
   void onPressedButton() {
 
   }
-  CircleButton(this.mini, this.icon, this.iconSize, this.color, this.tag );
-
   @override
-  State<StatefulWidget> createState() {
-    return _CircleButton();
-  }
-
+  _addButtonState createState() => _addButtonState();
 }
 
-class _CircleButton extends State<CircleButton> {
+class _addButtonState extends State<addButton> {
 
-  void onPressedButton() {
-
-  }
+void onPressedButton(){
+  Navigator.of(context).push(
+      MaterialPageRoute(
+          builder: (context) {
+            return AddPlaceScreen();
+          }
+      ));
+}
 
   @override
   Widget build(BuildContext context) {
@@ -42,3 +44,4 @@ class _CircleButton extends State<CircleButton> {
     );
   }
 }
+

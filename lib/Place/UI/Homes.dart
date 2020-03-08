@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_1/Place/UI/review.dart';
 
@@ -54,14 +55,36 @@ class Homes extends StatelessWidget {
       ),
 
 
-      Review(Nombre,ImagePath,Details, Description),
-      Review(Nombre,ImagePath,Details, Description),
-      Review(Nombre,ImagePath,Details, Description),
-      ]
-      ),
-      )
-      ],
-      ),
-    );
+
+           Container(
+             width: 200,
+             height: 200,
+             child: new StreamBuilder(
+                  stream: Firestore.instance.collection("Review").snapshots(),
+                  builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                    if (!snapshot.hasData) return Text('Loading...');
+                    return new ListView(
+                      children: snapshot.data.documents.map((document) {
+                        return new ListTile(
+title: Text(document['name']),
+                          subtitle: Text(document['details']),
+                          leading: CircleAvatar(
+                            backgroundImage: NetworkImage(
+                              document['photoURL']
+                            ),
+                          ),
+
+
+                        );
+                      }).toList(),
+                    );
+                  },
+                ),
+           ),
+
+       ]),
+      )]),
+      );
+
   }
 }

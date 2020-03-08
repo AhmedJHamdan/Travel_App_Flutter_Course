@@ -42,7 +42,7 @@ class BackGroundGradient extends StatelessWidget{
 
   }
 
-  BackGroundGradient(this.heigth, this.text, this.colorr, this.colorr2);
+  BackGroundGradient( this.heigth, this.text, this.colorr, this.colorr2);
 
 
 }

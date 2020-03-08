@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_1/Place/UI/CardImage.dart';
 import 'package:flutter_1/Place/UI/Homes.dart';
+import 'package:flutter_1/User/UI/add_place_screen.dart';
 import 'package:flutter_1/User/UI/profile_trips.dart';
+import 'package:flutter_1/test.dart';
 
 import 'Login.dart';
 import 'Place/button.dart';
@@ -75,7 +77,7 @@ class Home extends StatelessWidget{
           break;
         case 2:
           return CupertinoTabView(
-            builder: (BuildContext context) => ProfileTrips(),
+            builder: (BuildContext context) => AddPlaceScreen(),
           );
           break;
       }

@@ -5,4 +5,5 @@ class Place {
   String steps;
 
   Place(this.name, this.where, this.type, this.steps);
+
 }

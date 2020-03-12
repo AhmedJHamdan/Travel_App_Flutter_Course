@@ -53,6 +53,7 @@ top: 260,
                           onPressed: (){
 
                             signInWithGoogle().whenComplete( () {
+
                      Users user= new  Users(uid, name,photourl, email);
 CloudFirestoreAPI().updateUserData(user);
 CloudFirestoreAPI().getData();

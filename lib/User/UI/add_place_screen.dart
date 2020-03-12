@@ -1,21 +1,31 @@
 import 'dart:io';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_1/Firebase/cloud_firestore_api.dart';
+import 'package:flutter_1/Firebase/firebase_storage_API.dart';
+import 'package:flutter_1/Firebase/sign_in_with_google.dart';
 import 'package:flutter_1/Place/BackgroundGradient.dart';
+import 'package:flutter_1/Place/Places.dart';
+import 'package:flutter_1/Place/UI/Homes.dart';
 import 'package:flutter_1/Place/button.dart';
 import 'package:flutter_1/User/UI/BackGroundGradient.dart';
 import 'package:flutter_1/User/UI/button_purple.dart';
 import 'package:flutter_1/User/UI/title_header.dart';
+import 'package:flutter_1/main.dart';
 
 import '../../TextInput.dart';
 import 'TextInputLocation.dart';
 import 'card_image_fav.dart';
+Future<FirebaseUser> get CurrentUser => FirebaseAuth.instance.currentUser();
 
 class AddPlaceScreen extends StatefulWidget {
 
   File image;
 
   AddPlaceScreen({Key key, this.image});
+
 
 
   @override
@@ -68,7 +78,7 @@ class _AddPlaceScreen extends State<AddPlaceScreen> {
                 Container(
                   alignment: Alignment.center,
                   child: CardImageWithFabIcon(
-                    pathImage: "assets/mountain.jpeg",//widget.image.path,
+                    pathImage: widget.image,//widget.image.path,
                     iconData: Icons.camera_alt,
                     width: 350.0,
                     height: 250.0,left: 0,
@@ -101,9 +111,34 @@ class _AddPlaceScreen extends State<AddPlaceScreen> {
                     buttonText: "Add Place",
                     onPressed: () {
 
-_controllerDescriptionPlace.text;
+CurrentUser.then((FirebaseUser user){
+  if(user!=null){
+    String uid= user.uid;
+    String path= "${uid}/${DateTime.now().toString()}.jpg";
+    FirebaseStorageAPI().uploadFile(path, widget.image).then((StorageUploadTask upload){
+      upload.onComplete.then((StorageTaskSnapshot snapshot){
+        snapshot.ref.getDownloadURL().then((photoUrl){
+          print(photoUrl);
+          var description= _controllerDescriptionPlace.text;
+          String addLocation= "Palestine";
 
-                      //2. Cloud Firestore
+          var title =_controllerTitlePlace.text;
+
+          Places place= new Places(title,description, addLocation,photoUrl);
+          CloudFirestoreAPI().updatePlaceData(place);
+        });
+      });
+    });
+
+  }
+}
+
+);
+                      Scaffold.of(context).showSnackBar(
+                          SnackBar(
+                            content: Text("Added to Places"),
+                          )
+                      );                      //2. Cloud Firestore
                       //Place - title, description, url, userOwner, likes
 
                     },

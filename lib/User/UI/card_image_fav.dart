@@ -1,13 +1,13 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 
-import '../floatting_action_button_fav.dart';
 
 class  CardImageWithFabIcon extends StatelessWidget {
-
+  final File pathImage;
   final double height;
   final double width;
   double left;
-  final String pathImage;
   final VoidCallback onPressedFabIcon;
   final IconData iconData;
 
@@ -37,7 +37,7 @@ class  CardImageWithFabIcon extends StatelessWidget {
       decoration: BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
-              image: AssetImage(pathImage)
+              image: pathImage != null ? FileImage( pathImage ) : AssetImage('assets/Yo.jpeg')
           ),
           borderRadius: BorderRadius.all(Radius.circular(10.0)),
           shape: BoxShape.rectangle,
@@ -56,7 +56,6 @@ class  CardImageWithFabIcon extends StatelessWidget {
       alignment: Alignment(0.9,1.1),
       children: <Widget>[
         card,
-        floatting_action_button_fav()
       ],
     );
   }

@@ -50,3 +50,5 @@ void signOutGoogle() async {
 
   print("User Sign Out");
 }
+
+Future<FirebaseUser> get currentUser => FirebaseAuth.instance.currentUser();

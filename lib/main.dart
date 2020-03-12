@@ -72,12 +72,12 @@ class Home extends StatelessWidget{
           break;
         case 1:
           return CupertinoTabView(
-            builder: (BuildContext context) => Homes(),
+            builder: (BuildContext context) => AddPlaceScreen(),
           );
           break;
         case 2:
           return CupertinoTabView(
-            builder: (BuildContext context) => AddPlaceScreen(),
+            builder: (BuildContext context) => ProfileTrips(),
           );
           break;
       }
